@@ -1,0 +1,23 @@
+skema
+
+1. Daftar -> create
+2. Login -> read
+		 -> sorting -> nilai -> sekolah
+		 					 -> univ
+3. input data -> nilai -> create
+			  -> univ -> create
+
+
+ ----------								  ----------
+|  Login   |							 |  Create  |
+|          | if doesnt have account----->|			|
+ ---------- 							  ----------
+     |                                        |
+     |                                        |
+     |                                        |
+     |----------------------------------------|
+     |
+     |
+ 
+ ---------
+|  
