@@ -22,7 +22,7 @@ class Register extends CI_Controller {
 		$kota = $_POST['kota'];
 
 		$cek_username = $this->db->query("SELECT username from user WHERE username='$username'");
- 		if($cek_username)
+ 		if($username == "haha")
    		{
     		echo"<script type='text/javascript'>alert('username already exists')</script>";
    		}
