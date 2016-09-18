@@ -70,6 +70,9 @@ class Nilai extends CI_Controller {
 					'status' => $status,
 					'ratanilaisemua' => $ratanilaisemua,
 				);
+				$this->session->set_userdata(array(
+                	'status' => $status,
+            	));
 				$cek_status = $this->Model->UpdateData('user',$data_status,"userID = '$userID'");
 				redirect('dashboard');
 			}else{
