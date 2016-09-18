@@ -7,5 +7,4 @@ Aplikasi web berbasis PHP dengan framework Codeigniter, untuk pengurutan data ni
 *******************
 Author
 *******************
-Backend : M.Imam Muttaqin
-Frontend : Alvira
+M.Imam Muttaqin(Backend), Alvira(Frontend)
