@@ -15,20 +15,33 @@
 			<div class="nav-wrapper">
 				<div class="nav-wrapper">
 					<div class="container">
+						<ul class="left">
+							<li>
+								<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">&#xE5D2;</i></a>
+							</li>
+						</ul>
 						<p href="#!" class="brand-logo center">
 							<img src="<?php echo base_url()."assets/"; ?>images/logo.png">
 						</p>
-						<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">&#xE5D2;</i></a>
 						<ul class="right">
+							<li>
+								<!--Jika sudah follow ganti jadi:
+								<a class="modal-trigger" href="#unfollow" style="background-color:rgba(0,0,0,0.1)">
+									<i class="material-icons active">&#xE03B;</i>
+								</a>
+								-->
+								<a class="modal-trigger" href="#follow">
+									<i class="material-icons active">&#xE03B;</i>
+								</a>
+							</li>
 							<li>
 								<a href="notification.html" data-activates="notification" class="dropdown-button">
 									<!--Jika ada notif ganti jadi <i class="material-icons">&#xE7F4;</i> -->
 									<i class="material-icons">&#xE7F5;</i>
 								</a>
 							</li>
-							<li>
-								<a href="#!" data-activates="dropdown" class="dropdown-button more"><i class="material-icons">&#xE5D4;</i></a>
-								<ul id="dropdown" class="dropdown-content">
+								<a href="#!" data-activates="more" class="dropdown-button"><i class="material-icons">&#xE5D4;</i></a>
+								<ul id="more" class="dropdown-content">
 									<li><a href="faq.html">FAQ</a></li>
 									<li><a href="about.html">About</a></li>
 									<li><a href="settings.html">Settings</a></li>
@@ -49,9 +62,39 @@
 		<li class="profile">
 			<p><?php echo $this->session->userdata('name')?></p>
 		</li>
-		<li class="active"><a href="dashboard.html"><i class="material-icons">&#xE871;</i>Dashboard</a></li>
-		<li><a href="<?php echo base_url('Kompetitor');?>"><i class="material-icons">&#xE242;</i>Kompetitor SNMPTN</a></li>
-		<li><a href="kalender.html"><i class="material-icons">&#xE8DF;</i>Kalender</a></li>
+		<li><a href="dashboard.html"><i class="material-icons">&#xE871;</i>Dashboard</a></li>
+		<li class="no-padding">
+			<ul class="collapsible collapsible-accordion">
+				<li>
+					<a class="collapsible-header"><i class="material-icons">&#xE242;</i>Kompetitor SNMPTN</a></a>
+						<div class="collapsible-body">
+							<ul>
+								<li><a href="<?php echo base_url('kompetitor_sekolah');?>"><i class="material-icons">&#xE7F1;</i>Se-Sekolah</a></li>
+								<li><a href="<?php echo base_url('kompetitor_kota');?>"><i class="material-icons">&#xE55B;</i>Se-Kota</a></li>
+								<li><a href="<?php echo base_url('plan');?>"><i class="material-icons">&#xE923;</i>Ubah Plan</a></li>
+							</ul>
+						</div>
+				</li>
+			</ul>
+		</li>
+		<!--<li><a href="kalender.html"><i class="material-icons">&#xE8DF;</i>Kalender</a></li>-->
+		<li class="no-padding">
+			<ul class="collapsible collapsible-accordion">
+				<li>
+					<a class="collapsible-header active"><i class="material-icons">&#xE865;</i>Info Kuliah</a>
+						<div class="collapsible-body">
+							<ul>
+								<li><a href="<?php echo base_url('infokuliah');?>" class="aktif">SNMPTN</a></li>
+								<li><a href="#!">SBMPTN</a></li>
+								<li><a href="#!">Ujian Mandiri</a></li>
+								<li><a href="#!">Kedinasan</a></li>
+								<li><a href="#!">Swasta</a></li>
+								<li><a href="#!">Beasiswa</a></li>
+							</ul>
+						</div>
+				</li>
+			</ul>
+		</li>
 	</ul>
 	<!--End Sidebar-->
 	
